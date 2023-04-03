@@ -1,0 +1,277 @@
+:root {
+    --background: #d4f7ef;
+    --calculator-background: #F2EBBF;
+    --calculator-border: ;
+    --display-background: #8CBEB2 ;
+    --display-text: #03A062;
+    --display-border: ;
+    --button-border: black;
+    --button-text: rgb(240, 240, 240);
+    --magic: #F3B562;
+    --magic-hover: ;
+    --magic-active: ;
+    --clear: #F06060;
+    --clear-hover: ;
+    --clear-active: ;
+    --number: #243763;
+    --number-hover: ;
+    --number-active: ;
+    --operator: #5C4B51;
+    --operator-hover: ;
+    --operator-active: ;
+
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', Courier, monospace;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+html {
+    min-height: 100%;
+    position: relative;
+  }
+
+body {
+    background-color: var(--background);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    min-height: 500px;
+    margin-top: 25px;
+    margin-bottom: 80px;
+}
+
+#calculator {
+    width: 400px;
+    height: 520px;
+    border: var(--calculator-border) solid 4px;
+    background-color: var(--calculator-background);
+    border-radius: 15px;
+    padding: 20px;
+}
+
+#display {
+    border-radius: 10px;
+    background-color: var(--display-background);
+    color: var(--display-text);
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin: 10px 0;
+    padding: 10px 45px;
+    border: 2px solid var(--display-border);
+}
+
+#display-previous {
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+#display-current {
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.button {
+    height: 60px;
+    /* width: 40px; */
+    border-radius: 5px;
+    margin: 2px 2px;
+    border: solid 2px var(--button-border);
+    text-align: center;
+    vertical-align: middle;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    cursor: pointer;
+    color: var(--button-text);
+}
+
+
+#backspace,
+#clear {
+    background-color: var(--clear);
+}
+
+#backspace:hover,
+#clear:hover {
+    background-color: var(--clear-hover);
+}
+
+#backspace:active,
+#clear:active {
+    background-color: var(--clear-active);
+}
+
+.magic-button {
+    background-color: var(--magic);
+}
+
+.magic-button:hover {
+    background-color: var(--magic-hover);
+}
+
+.magic-button:active {
+    background-color: var(--magic-active);
+}
+
+.number-button {
+    background-color: var(--number);
+}
+
+.number-button:hover {
+    background-color: var(--number-hover);
+}
+
+.number-button:active {
+    background-color: var(--number-active);
+}
+
+.operator-button {
+    background-color: var(--operator);
+}
+
+.operator-button:hover {
+    background-color: var(--operator-hover);
+}
+
+.operator-button:active {
+    background-color: var(--operator-active);
+}
+
+#numbers-operators-container {
+    display: flex;
+}
+
+#operators {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 40%;
+}
+
+#numbers {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+#top-row {
+    display: flex;
+}
+
+.numbers-row {
+    display: flex;
+}
+
+.operators-row {
+    display: flex;
+}
+
+#n0 {
+    flex: 2.3;
+}
+
+#dot {
+    flex: 1;
+}
+
+.operators-row-last {
+    display: flex;
+    flex: 1;
+}
+
+#add {
+    height: auto;
+}
+
+#subtract-equals-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#subtract,
+#equals {
+    width: 67px;
+}
+
+#footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.disable-select {
+    -webkit-user-select: none;  
+    -moz-user-select: none;    
+    -ms-user-select: none;      
+    user-select: none;
+  }
+
+
+
+/* MEDIA QUERIES */
+  @media (max-width: 1200px) {
+    /* body {
+      justify-content: center;
+    } */
+  }
+  
+  @media (max-width: 850px) {
+    /* body {
+      gap: 50px;
+    }
+  
+    #options {
+      width: 150px;
+      gap: 16px;
+    }
+  
+    #gridSizeText {
+      margin-bottom: -4px;
+    }
+  
+    #etch-a-sketch {
+      width: 400px;
+      height: 400px;
+    }
+  } */
+  
+  @media (max-width: 650px) {
+    /* #header {
+      font-size: 50px;
+    }
+  
+    #content {
+      flex-direction: column-reverse;
+    }
+  
+    #etch-a-sketch {
+      width: 300px;
+      height: 300px;
+    } */
+  }
