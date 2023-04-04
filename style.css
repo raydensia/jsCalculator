@@ -1,30 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 :root {
-    --background: #d4f7ef;
-    --calculator-background: #F2EBBF;
-    --calculator-border: ;
-    --display-background: #8CBEB2 ;
-    --display-text: #03A062;
-    --display-border: ;
-    --button-border: black;
-    --button-text: rgb(240, 240, 240);
-    --magic: #F3B562;
-    --magic-hover: ;
-    --magic-active: ;
-    --clear: #F06060;
-    --clear-hover: ;
-    --clear-active: ;
-    --number: #243763;
-    --number-hover: ;
-    --number-active: ;
-    --operator: #5C4B51;
-    --operator-hover: ;
-    --operator-active: ;
+    --background: #e1edea;
+    --calculator-background: rgb(169, 163, 165);
+    --calculator-border: #36302f;
+    --display-background: #f3f3f3 ;
+    --display-text: #000000;
+    --display-border: #36302f;
+    --button-border: #36302f;
+    --button-text: #f0f0f0;
+    --magic: #00AA9E;
+    --magic-hover: #008279;
+    --magic-active: #015953;
+    --clear: #DE0029;
+    --clear-hover: #ae0222;
+    --clear-active: #820119;
+    --number: #326DB3;
+    --number-hover: #265288;
+    --number-active: #1c3c64;
+    --operator: #F3C202;
+    --operator-hover: #d1a802;
+    --operator-active: #a38302;
 
 }
 
 * {
     box-sizing: border-box;
-    font-family: 'Roboto', Courier, monospace;
+    font-family: 'Press Start 2P', Courier, monospace;
     font-size: 24px;
     font-weight: bold;
     padding: 0;
@@ -58,18 +60,22 @@ main {
 
 #calculator {
     width: 400px;
-    height: 520px;
+    /* height: 520px; */
+    height: auto;
     border: var(--calculator-border) solid 4px;
     background-color: var(--calculator-background);
     border-radius: 15px;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 #display {
     border-radius: 10px;
     background-color: var(--display-background);
     color: var(--display-text);
-    min-height: 100px;
+    /* height: 100px; */
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: end;
@@ -80,17 +86,31 @@ main {
 
 #display-previous {
     height: 50px;
+    max-width: 260px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    /* align-items: center; */
+    text-align: right;
+    font-size: 20px;
+    overflow-wrap: break-word;
+    padding-top: 15px;
 }
 
 #display-current {
-    height: 50px;
+    /* height: 50px; */
+    max-width: 240px;
+    text-align: right;
+    overflow-wrap: break-word;
+    padding-top: 15px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    /* align-items: center;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; */
 }
 
-.button {
+button {
     height: 60px;
     /* width: 40px; */
     border-radius: 5px;
@@ -176,6 +196,14 @@ main {
     width: 60%;
 }
 
+/* .number-disabled {
+    background-color: rgba(128, 128, 128, 0.581);
+}
+
+.operator-disabled {
+    background-color: ;
+} */
+
 #top-row {
     display: flex;
 }
@@ -186,6 +214,10 @@ main {
 
 .operators-row {
     display: flex;
+}
+
+#sign {
+    font-size: 18px;
 }
 
 #n0 {
