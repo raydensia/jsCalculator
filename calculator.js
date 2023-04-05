@@ -29,6 +29,17 @@ function divide(a, b) {
     else return "Math ERROR";
 }
 
+function sign() {
+    currentNumber = -currentNumber;
+    updateCurrentDisplay(currentNumber);
+    return;
+}
+
+function percent() {
+    currentNumber = currentNumber / 100;
+    updateCurrentDisplay(currentNumber);
+}
+
 function roundToDecimal(number, decimal)
 {
     return Math.round(number * Math.pow(10, decimal)) / Math.pow(10, decimal);
@@ -51,8 +62,9 @@ function operate(operatorName, a, b) {
             return roundToDecimal(result, roundingDecimal);
         case 'percent':
             break;
-        case 'sign':
-            break;
+        // case 'sign':
+        //     result = sign(b);
+        //     return result;
         case 'equals':
             break;
     }
@@ -235,6 +247,7 @@ function handleKeyboardInput(e) {
     if (e.key === '=' || e.key === 'Enter') equals()
     if (e.key === 'Backspace') backspace();
     if (e.key === 'Escape') clearDisplay();
+    if (e.key === '%') percent();
     if (e.key === '+' || e.key === '-' || e.key === '*' || e.key === '/')
       doOperation();
 }
@@ -247,6 +260,8 @@ const operatorButtons = document.querySelectorAll(".operator-button");
 const clearButton = document.getElementById("clear");
 const backspaceButton = document.getElementById("backspace");
 const equalsButton = document.getElementById("equals");
+const signButton = document.getElementById("sign");
+const percentButton = document.getElementById("percent");
 
 
 // const currentDisplayObserverOptions = {childList: true};
@@ -263,6 +278,12 @@ clearButton.addEventListener("click", clearDisplay);
 operatorButtons.forEach(button => button.addEventListener("click", doOperation));
 // operatorButtons.forEach(button => button.addEventListener("click",(e) => doOperation(e.target.id, e.target.textContent)));
 equalsButton.removeEventListener("click", doOperation);
+signButton.removeEventListener("click", doOperation);
+percentButton.removeEventListener("click", doOperation);
+
+
 equalsButton.addEventListener("click", equals);
+signButton.addEventListener("click", sign);
+percentButton.addEventListener("click", percent);
 numberButtons.forEach(button => button.addEventListener("click", (e) => populateDisplay(e.target.textContent)));
 window.addEventListener('keydown', handleKeyboardInput)
