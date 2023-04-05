@@ -1,2 +1,2 @@
 # jsCalculator
-a web-based simple calculator
+a simple web-based calculator
