@@ -27,7 +27,7 @@
 * {
     box-sizing: border-box;
     font-family: 'Press Start 2P', Courier, monospace;
-    font-size: 24px;
+    /* font-size: 1.3rem; */
     font-weight: bold;
     padding: 0;
     margin: 0;
@@ -35,7 +35,8 @@
 
 h1 {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
 }
 
 html {
@@ -53,35 +54,35 @@ main {
     justify-content: center;
     align-items: center;
     height: 75vh;
-    min-height: 500px;
-    margin-top: 25px;
-    margin-bottom: 80px;
+    /* min-height: 200px; */
+    /* margin-top: 1rem; */
+    margin-bottom: 4rem;
 }
 
 #calculator {
-    width: 400px;
-    /* height: 520px; */
+    min-width: 100px;
+    margin: 1rem;
     height: auto;
-    border: var(--calculator-border) solid 4px;
+    border: var(--calculator-border) solid 0.25rem;
     background-color: var(--calculator-background);
-    border-radius: 15px;
-    padding: 20px;
+    border-radius: 1rem;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
 }
 
 #display {
-    border-radius: 10px;
+    border-radius: 0.7rem;
     background-color: var(--display-background);
     color: var(--display-text);
-    /* height: 100px; */
-    height: auto;
+    /* height: auto; */
     display: flex;
     flex-direction: column;
     align-items: end;
-    margin: 10px 0;
-    padding: 10px 45px;
+    margin: 0.8rem 0;
+    padding: 0.8rem 2.5rem;
     border: 2px solid var(--display-border);
+    font-size: 1.5rem;
 }
 
 #display-previous {
@@ -111,20 +112,21 @@ main {
 }
 
 button {
-    height: 60px;
-    /* width: 40px; */
+    /* height: 60px; */
+    min-width: 40px;
     border-radius: 5px;
     margin: 2px 2px;
     border: solid 2px var(--button-border);
     text-align: center;
     vertical-align: middle;
-    padding: 0;
+    padding: 0.8rem;
     display: flex;
     justify-content: center;
     align-items: center;
     flex: 1;
     cursor: pointer;
     color: var(--button-text);
+    font-size: 2rem;
 }
 
 
@@ -221,7 +223,7 @@ button {
 }
 
 #n0 {
-    flex: 2.3;
+    flex: 3.3;
 }
 
 #dot {
@@ -235,16 +237,20 @@ button {
 
 #add {
     height: auto;
+    display: flex;
+    flex: 1;
 }
 
 #subtract-equals-container {
     display: flex;
     flex-direction: column;
+    flex: 1.9;
 }
 
 #subtract,
 #equals {
-    width: 67px;
+    /* width: 67px; */
+    flex: 1;
 }
 
 #footer {
@@ -253,8 +259,8 @@ button {
     bottom: 0;
     left: 0;
     text-align: center;
-    margin: 10px 0;
-    font-size: 20px;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
 }
 
 .disable-select {
@@ -267,44 +273,22 @@ button {
 
 
 /* MEDIA QUERIES */
-  @media (max-width: 1200px) {
-    /* body {
-      justify-content: center;
-    } */
-  }
-  
-  @media (max-width: 850px) {
-    /* body {
-      gap: 50px;
+  @media (max-width: 320px) {
+    button {
+        /* height: 60px; */
+        min-width: 40px;
+        border-radius: 5px;
+        margin: 2px 2px;
+        border: solid 2px var(--button-border);
+        text-align: center;
+        vertical-align: middle;
+        padding: 0.8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        cursor: pointer;
+        color: var(--button-text);
+        font-size: 1rem;
     }
-  
-    #options {
-      width: 150px;
-      gap: 16px;
-    }
-  
-    #gridSizeText {
-      margin-bottom: -4px;
-    }
-  
-    #etch-a-sketch {
-      width: 400px;
-      height: 400px;
-    }
-  } */
-}
-  
-  @media (max-width: 650px) {
-    /* #header {
-      font-size: 50px;
-    }
-  
-    #content {
-      flex-direction: column-reverse;
-    }
-  
-    #etch-a-sketch {
-      width: 300px;
-      height: 300px;
-    } */
   }
